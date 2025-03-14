@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Phone Input Styles */
+.react-phone-input-2 {
+  @apply font-sans;
+}
+
+.react-phone-input-2 .country-list {
+  @apply bg-gray-800 text-white border-gray-700;
+}
+
+.react-phone-input-2 .country-list .country:hover {
+  @apply bg-gray-700;
+}
+
+.react-phone-input-2 .country-list .country.highlight {
+  @apply bg-gray-700;
+}
+
+.react-phone-input-2 .selected-flag:hover,
+.react-phone-input-2 .selected-flag:focus {
+  @apply bg-transparent;
+}
+
+.react-phone-input-2 .flag-dropdown {
+  @apply border-0 bg-transparent;
+}
+
+.react-phone-input-2 .country-list .search {
+  @apply bg-gray-800 text-white border-gray-700;
+}
+
+.react-phone-input-2 .country-list .search-box {
+  @apply bg-gray-800 text-white border-gray-700;
+}
+
+@media print {
+  @page {
+    margin: 0.8cm;
+    size: A4;
+  }
+
+  html, body {
+    background-color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    min-height: 100vh;
+    color: black !important;
+    background: white !important;
+    font-size: 11pt;
+  }
+
+  .dark {
+    color-scheme: light !important;
+  }
+
+  .dark * {
+    color: black !important;
+    border-color: #666 !important;
+    background-color: transparent !important;
+  }
+
+  /* Hide non-essential elements */
+  nav, button, .print-hide {
+    display: none !important;
+  }
+
+  /* Force background and text colors */
+  .bg-gray-100,
+  .bg-gray-800,
+  .bg-gray-900,
+  .dark\:bg-gray-800,
+  .dark\:bg-gray-900 {
+    background-color: white !important;
+  }
+
+  .text-gray-500,
+  .text-gray-600,
+  .text-gray-700,
+  .text-gray-800,
+  .text-gray-900,
+  .dark\:text-gray-300,
+  .dark\:text-gray-400,
+  .dark\:text-white {
+    color: black !important;
+  }
+
+  /* Ensure images print properly */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure proper page breaks */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* Reduce spacing for print */
+  .mb-8 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .mb-6 {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Adjust font sizes for print */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.1rem !important;
+  }
+}
